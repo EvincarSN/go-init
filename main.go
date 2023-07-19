@@ -62,6 +62,8 @@ func main() {
 		panic(err)
 	}
 
+	defer db.Close() // defer espera tudo rodar depois executa o close
+
 	orderRepository := database.NewOrderRepository(db)
 	uc := usecase.NewCalculateFinalPrice(orderRepository)
 
