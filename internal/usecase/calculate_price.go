@@ -8,6 +8,8 @@ type OrderInput struct {
 	Tax   float64
 }
 
+//{"id":"1", "price": 10.0, "tax": 0.1}
+
 type OrderOutput struct {
 	ID         string
 	Price      float64
